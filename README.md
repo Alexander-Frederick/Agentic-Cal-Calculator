@@ -1,3 +1,18 @@
+# Agentic Coding Practice
+
+This project was meant to test the limitations and uses of Agentic Coding.
+
+## Thoughts
+
+The agent was able to complete the code easily. I picked this project because I thought it would be simple enough and I'd get some value out of it.
+There were some oddities with getting the code to initally run. Such as, putting all the code into a text file that I would have to sift through. Instead, I put the time
+into learning more about how to Agentically Code that's where I heard about tool use. Using Tool made it to where the AI could create the files on my machine itselft without my intervention.
+Overall this first iteration of the project took about 2 hours to make. With most of those two hours learning the intial steps.
+
+## Future Use
+
+I will be using agentic coding in the future, especially for prototyping.
+
 # Calorie Tracker Desktop Application
 
 A standalone desktop application for tracking daily calorie intake, macro nutrients, weight, and calorie goals. All data is stored in a spreadsheet format and includes visualization capabilities.
