@@ -1,0 +1,164 @@
+# AI Agent Prompt: Build a Calorie Tracker Desktop Application
+
+## Project Overview
+Create a standalone desktop application in Python that tracks daily calorie intake, macro nutrients, weight, and calorie goals. The application should store all data in a spreadsheet format and provide functionality for data entry and visualization over time.
+
+---
+
+## Technical Requirements
+- **Language**: Python
+- **Application Type**: Standalone Desktop Application
+- **Deployment**: Must include an executable file that launches the application
+- **Data Storage**: Spreadsheet file (Excel or CSV format)
+  - The application must automatically create the spreadsheet if it doesn't exist
+  - All user data should persist between sessions
+
+---
+
+## Core Features
+
+### 1. Data Tracking
+**Description**: The application tracks the following data points for each day:
+- **Date**: The specific day for the entry
+- **Calories**: Total calorie intake for the day
+- **Macro Nutrients**: 
+  - Protein (grams)
+  - Carbohydrates (grams)
+  - Fat (grams)
+- **Daily Weight**: User's weight measurement for the day (pounds or kilograms)
+- **Calorie Goal**: Target calorie intake for the day
+
+**Implementation Details**:
+- Each row in the spreadsheet represents one day
+- Data should be organized with columns for: Date, Calories, Protein, Carbs, Fat, Weight, Calorie Goal
+- The application should handle creating the spreadsheet with proper headers if it doesn't exist
+
+---
+
+### 2. Data Entry and Updates
+**Description**: Users can add or update their tracking data for any given day.
+
+**Functionality**:
+- **Incremental Calorie Updates**: Users can add calories to an existing day's total
+  - Example: If current total is 1000 calories and user eats a banana (80 calories), they can add 80 to reach 1080 total
+- **Incremental Macro Nutrient Updates**: Users can add to existing macro nutrient totals for the day
+- **Weight Entry**: Users can enter or update their weight for a specific day
+- **Calorie Goal Setting**: Users can set or modify the calorie goal for any day
+- **Date Selection**: Users can select which date they want to update (current day or historical dates)
+
+**User Experience**:
+- The interface should make it easy to quickly add values to the current day
+- Users should be able to view current totals before adding new values
+- The application should prevent duplicate entries for the same day (update existing entry instead)
+
+---
+
+### 3. Data Visualization and Reporting
+**Description**: Users can view their tracking data over time through charts and reports.
+
+**Visualization Options**:
+- **Weight Over Time**: Line chart showing weight progression across selected date range
+- **Calorie Intake Over Time**: Line chart showing daily calorie consumption
+- **Macro Nutrients Over Time**: Chart displaying protein, carbs, and fat trends
+- **Goal vs. Actual Comparison**: Chart comparing calorie goal against actual calorie intake
+  - Should clearly show days where goal was met, exceeded, or not reached
+  - Could include a difference/variance visualization
+
+**Report Features**:
+- Users should be able to select date ranges for visualization (e.g., last 7 days, last 30 days, custom range)
+- Display summary statistics (averages, totals, trends)
+- Charts should be clear, labeled, and easy to interpret
+
+---
+
+### 4. Spreadsheet Management
+**Description**: The application manages the underlying spreadsheet data file.
+
+**Functionality**:
+- **Auto-Creation**: If the spreadsheet file doesn't exist on first launch, create it with proper structure
+- **Data Validation**: Ensure data integrity when reading and writing to the spreadsheet
+- **File Location**: The spreadsheet should be stored in a predictable location (e.g., same directory as executable or user's documents folder)
+- **Backup Consideration**: (Optional) Ability to backup or export the spreadsheet
+
+---
+
+### 5. User Interface
+**Description**: A desktop GUI that is intuitive and easy to use.
+
+**Requirements**:
+- Clean, organized layout
+- Clear sections for:
+  - Data entry (add/update values)
+  - Data visualization (view charts and reports)
+  - Settings or preferences (if needed)
+- Appropriate input validation and error messages
+- Responsive to user actions
+
+**Suggested Python GUI Framework**:
+- Tkinter (built-in, good for simple apps)
+- PyQt5/PyQt6 (more advanced, professional look)
+- Kivy (cross-platform)
+- CustomTkinter (modern-looking Tkinter variant)
+
+---
+
+## Data Model Structure
+
+### Spreadsheet Columns:
+| Date | Calories | Protein (g) | Carbs (g) | Fat (g) | Weight | Calorie Goal |
+|------|----------|-------------|-----------|---------|--------|--------------|
+| YYYY-MM-DD | Integer | Decimal | Decimal | Decimal | Decimal | Integer |
+
+---
+
+## Deliverables
+
+1. **Python Source Code**: All application code properly organized
+2. **Executable File**: A standalone .exe (Windows) or equivalent for other OS
+3. **README**: Instructions for:
+   - How to run the executable
+   - How to use the application
+   - Where data is stored
+   - Any dependencies or requirements
+4. **Sample Spreadsheet**: An example of the data structure (optional)
+
+---
+
+## Additional Considerations
+
+### Error Handling:
+- Handle missing or corrupted spreadsheet files
+- Validate user inputs (no negative calories, valid dates, etc.)
+- Graceful error messages for file I/O issues
+
+### Data Persistence:
+- Ensure all changes are saved to the spreadsheet immediately or with a clear save action
+- Confirm data is written successfully
+
+### User Experience Enhancements (Optional):
+- Default to current date for quick entry
+- Keyboard shortcuts for common actions
+- Recent entries display
+- Calorie calculator or food database integration (future feature)
+
+---
+
+## Success Criteria
+
+The application is complete when:
+1. It launches via executable without requiring Python installation
+2. It creates and manages a spreadsheet for data storage
+3. Users can add/update calories, macros, weight, and goals for any date
+4. Users can visualize their data over time through charts
+5. Data persists between sessions
+6. The interface is intuitive and functional
+
+---
+
+## Feature Completion Tracking
+
+As you implement each feature, mark it as complete with a description of what was implemented:
+
+**Example Format:**
+- [ ] Feature Name - Not started
+- [x] Feature Name - Description of implementation
